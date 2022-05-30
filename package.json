@@ -13,6 +13,7 @@
     "build:umd": "cross-env BABEL_ENV=umd webpack --mode=production",
     "lint": "eslint src/**/*.js src/*.js *.js test/**/*.{js,jsx} test/*.js demo/**/*.{js,jsx} demo/*.{js,jsx} --ext .js,.jsx",
     "prettier": "prettier --write demo/**/* src/**/* test/**/* types/**/* *.js *.ts",
+    "prepare": "npm run build",
     "preversion": "npm test && npm run lint",
     "version": "node ./version-bower.js && npm run build && git add -A bower.json"
   },
@@ -38,7 +39,7 @@
   "homepage": "https://github.com/react-ga/react-ga",
   "peerDependencies": {
     "prop-types": "^15.6.0",
-    "react": "^15.6.2 || ^16.0 || ^17"
+    "react": "^15.6.2 || ^16.0 || ^17 || ^18"
   },
   "devDependencies": {
     "@babel/cli": "7.6.2",
